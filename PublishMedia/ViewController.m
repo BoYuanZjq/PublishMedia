@@ -23,7 +23,8 @@
 // 发布
 - (IBAction)publishEvent:(id)sender {
     FBFcDynamicViewController *con = [[FBFcDynamicViewController alloc] initWithNibName:@"FBFcDynamicViewController" bundle:nil];
-    [self.navigationController pushViewController:con animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:con];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 

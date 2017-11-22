@@ -38,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     // Do any additional setup after loading the view from its nib.
     [self.tableView registerClass:[FBFcDynamicTopCell class] forCellReuseIdentifier:K_Top_Cell];
     [self.tableView registerNib:[UINib nibWithNibName:@"FBFcDynamicBottomCell" bundle:nil] forCellReuseIdentifier:K_Bottom_Cell];
@@ -45,7 +47,29 @@
     
     self.dynamicModel  = [[FBFcDynamicModel alloc] init];
     
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [backButton setTitle:@"取消" forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backButton addTarget:self.navigationController action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backItem;
+    
+    UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [sendButton setTitle:@"发布" forState:UIControlStateNormal];
+    [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [sendButton addTarget:self.navigationController action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *sendItem = [[UIBarButtonItem alloc] initWithCustomView:sendButton];
+    self.navigationItem.rightBarButtonItem = sendItem;
+    
 }
+//关闭
+- (void)close {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)send {
+    
+}
+
 #pragma mark ====== UITableViewDelegate ======
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

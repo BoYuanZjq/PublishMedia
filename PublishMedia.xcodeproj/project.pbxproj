@@ -108,6 +108,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6517F4791FC5738D00F680A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				658546B21FC41CAB00D5B5A2 /* UICustomTextView.h */,
+				658546B31FC41CAB00D5B5A2 /* UICustomTextView.m */,
+				658546AD1FC4164A00D5B5A2 /* FBFcDynamicTopCell.h */,
+				658546AE1FC4164A00D5B5A2 /* FBFcDynamicTopCell.m */,
+				65143A241FC45B53009E11AC /* FBFcDynamicBottomCell.h */,
+				65143A251FC45B53009E11AC /* FBFcDynamicBottomCell.m */,
+				65143A261FC45B53009E11AC /* FBFcDynamicBottomCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6517F47A1FC573A700F680A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65143A291FC4629F009E11AC /* FBFcDynamicModel.h */,
+				65143A2A1FC4629F009E11AC /* FBFcDynamicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6517F47B1FC5741100F680A5 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				6517F47C1FC5742600F680A5 /* Controller */,
+				6517F47A1FC573A700F680A5 /* Model */,
+				6517F4791FC5738D00F680A5 /* View */,
+				6585467B1FC4121500D5B5A2 /* TZImagePickerController */,
+				658546741FC411DD00D5B5A2 /* CollectionViewFlowLayout */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		6517F47C1FC5742600F680A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				658546A81FC4127800D5B5A2 /* FBFcDynamicViewController.h */,
+				658546A91FC4127800D5B5A2 /* FBFcDynamicViewController.m */,
+				658546AA1FC4127800D5B5A2 /* FBFcDynamicViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6563E7FB1FC2DB6E0013176F = {
 			isa = PBXGroup;
 			children = (
@@ -127,29 +172,16 @@
 		6563E8061FC2DB6E0013176F /* PublishMedia */ = {
 			isa = PBXGroup;
 			children = (
-				658546B21FC41CAB00D5B5A2 /* UICustomTextView.h */,
-				658546B31FC41CAB00D5B5A2 /* UICustomTextView.m */,
-				6585467B1FC4121500D5B5A2 /* TZImagePickerController */,
-				658546741FC411DD00D5B5A2 /* CollectionViewFlowLayout */,
+				6517F47B1FC5741100F680A5 /* Publish */,
 				6563E8071FC2DB6E0013176F /* AppDelegate.h */,
 				6563E8081FC2DB6E0013176F /* AppDelegate.m */,
 				6563E80A1FC2DB6E0013176F /* ViewController.h */,
 				6563E80B1FC2DB6E0013176F /* ViewController.m */,
-				658546A81FC4127800D5B5A2 /* FBFcDynamicViewController.h */,
-				658546A91FC4127800D5B5A2 /* FBFcDynamicViewController.m */,
-				658546AA1FC4127800D5B5A2 /* FBFcDynamicViewController.xib */,
-				658546AD1FC4164A00D5B5A2 /* FBFcDynamicTopCell.h */,
-				658546AE1FC4164A00D5B5A2 /* FBFcDynamicTopCell.m */,
 				6563E80D1FC2DB6E0013176F /* Main.storyboard */,
 				6563E8101FC2DB6E0013176F /* Assets.xcassets */,
 				6563E8121FC2DB6E0013176F /* LaunchScreen.storyboard */,
 				6563E8151FC2DB6E0013176F /* Info.plist */,
 				6563E8161FC2DB6E0013176F /* main.m */,
-				65143A241FC45B53009E11AC /* FBFcDynamicBottomCell.h */,
-				65143A251FC45B53009E11AC /* FBFcDynamicBottomCell.m */,
-				65143A261FC45B53009E11AC /* FBFcDynamicBottomCell.xib */,
-				65143A291FC4629F009E11AC /* FBFcDynamicModel.h */,
-				65143A2A1FC4629F009E11AC /* FBFcDynamicModel.m */,
 			);
 			path = PublishMedia;
 			sourceTree = "<group>";
