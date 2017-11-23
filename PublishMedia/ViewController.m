@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "FBFcDynamicViewController.h"
+#import "FBFriendCircleViewController.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,11 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:con];
     [self presentViewController:nav animated:YES completion:nil];
 }
-
+//　朋友圈
+- (IBAction)friendC:(id)sender {
+    FBFriendCircleViewController *friend = [[FBFriendCircleViewController alloc] initWithNibName:@"FBFriendCircleViewController" bundle:nil];
+    [self.navigationController pushViewController:friend animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

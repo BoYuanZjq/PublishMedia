@@ -1,0 +1,43 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - MLLabel (1.10.5)
+  - Reachability (3.2)
+  - SDAutoLayout (2.2.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - TZImagePickerController (1.9.5)
+
+DEPENDENCIES:
+  - AFNetworking
+  - MLLabel
+  - Reachability
+  - SDAutoLayout
+  - SDWebImage
+  - TZImagePickerController
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MLLabel: d76124055a2205e7f76878e62cd06ba925ba0c97
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  TZImagePickerController: 3f735f4ad5ca6a292a762216d404f9d7a83adad4
+
+PODFILE CHECKSUM: 5c418f4d8be00b30f813b0b07644b655801bbfea
+
+COCOAPODS: 1.4.0.beta.1

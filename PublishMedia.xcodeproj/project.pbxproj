@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31D73DF1BBBC0A1945A56614 /* Pods_PublishMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA95647411643BD6BA9CA7C6 /* Pods_PublishMedia.framework */; };
+		650ED7BC1FC69A2E00303373 /* FBFriendOperationMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650ED7BB1FC69A2E00303373 /* FBFriendOperationMenuView.m */; };
+		650ED7BF1FC69EB900303373 /* FBWeiXinPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650ED7BE1FC69EB900303373 /* FBWeiXinPhotoContainerView.m */; };
+		650ED8061FC6B52500303373 /* FBFriendCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 650ED8051FC6B52500303373 /* FBFriendCommentModel.m */; };
+		650ED8091FC6CA0D00303373 /* FBFriendCrCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650ED8071FC6CA0C00303373 /* FBFriendCrCommentView.m */; };
 		65143A271FC45B53009E11AC /* FBFcDynamicBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65143A251FC45B53009E11AC /* FBFcDynamicBottomCell.m */; };
 		65143A281FC45B53009E11AC /* FBFcDynamicBottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65143A261FC45B53009E11AC /* FBFcDynamicBottomCell.xib */; };
 		65143A2B1FC4629F009E11AC /* FBFcDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65143A2A1FC4629F009E11AC /* FBFcDynamicModel.m */; };
+		6517F4861FC57F4800F680A5 /* FBFriendCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517F4841FC57F4800F680A5 /* FBFriendCircleViewController.m */; };
+		6517F4871FC57F4800F680A5 /* FBFriendCircleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6517F4851FC57F4800F680A5 /* FBFriendCircleViewController.xib */; };
+		6517F48A1FC5811800F680A5 /* FBFriendCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517F4891FC5811800F680A5 /* FBFriendCircleCell.m */; };
+		651B90FE1FC70C510097F173 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B90F81FC70C510097F173 /* SDPhotoBrowser.m */; };
+		651B90FF1FC70C510097F173 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B90F91FC70C510097F173 /* SDWaitingView.m */; };
+		651B91001FC70C510097F173 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B90FA1FC70C510097F173 /* SDBrowserImageView.m */; };
+		651B91061FC7177D0097F173 /* RequestNetUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B91021FC7177D0097F173 /* RequestNetUtils.m */; };
+		651B91071FC7177D0097F173 /* FcVisit.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B91031FC7177D0097F173 /* FcVisit.m */; };
+		651B910A1FC717EA0097F173 /* AutoCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B91081FC717EA0097F173 /* AutoCommon.m */; };
+		651B910D1FC718470097F173 /* UIDevice+RTCDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = 651B910C1FC718470097F173 /* UIDevice+RTCDevice.mm */; };
 		6563E8091FC2DB6E0013176F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563E8081FC2DB6E0013176F /* AppDelegate.m */; };
 		6563E80C1FC2DB6E0013176F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563E80B1FC2DB6E0013176F /* ViewController.m */; };
 		6563E80F1FC2DB6E0013176F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6563E80D1FC2DB6E0013176F /* Main.storyboard */; };
@@ -40,11 +55,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0494643E4AC2AABA9FEFC081 /* Pods-PublishMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublishMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia.debug.xcconfig"; sourceTree = "<group>"; };
+		4399E1641F489614C708C3DA /* Pods-PublishMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublishMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia.release.xcconfig"; sourceTree = "<group>"; };
+		650ED7BA1FC69A2E00303373 /* FBFriendOperationMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFriendOperationMenuView.h; sourceTree = "<group>"; };
+		650ED7BB1FC69A2E00303373 /* FBFriendOperationMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFriendOperationMenuView.m; sourceTree = "<group>"; };
+		650ED7BD1FC69EB900303373 /* FBWeiXinPhotoContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBWeiXinPhotoContainerView.h; sourceTree = "<group>"; };
+		650ED7BE1FC69EB900303373 /* FBWeiXinPhotoContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBWeiXinPhotoContainerView.m; sourceTree = "<group>"; };
+		650ED8041FC6B52500303373 /* FBFriendCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFriendCommentModel.h; sourceTree = "<group>"; };
+		650ED8051FC6B52500303373 /* FBFriendCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFriendCommentModel.m; sourceTree = "<group>"; };
+		650ED8071FC6CA0C00303373 /* FBFriendCrCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendCrCommentView.m; sourceTree = "<group>"; };
+		650ED8081FC6CA0C00303373 /* FBFriendCrCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendCrCommentView.h; sourceTree = "<group>"; };
 		65143A241FC45B53009E11AC /* FBFcDynamicBottomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFcDynamicBottomCell.h; sourceTree = "<group>"; };
 		65143A251FC45B53009E11AC /* FBFcDynamicBottomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFcDynamicBottomCell.m; sourceTree = "<group>"; };
 		65143A261FC45B53009E11AC /* FBFcDynamicBottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FBFcDynamicBottomCell.xib; sourceTree = "<group>"; };
 		65143A291FC4629F009E11AC /* FBFcDynamicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFcDynamicModel.h; sourceTree = "<group>"; };
 		65143A2A1FC4629F009E11AC /* FBFcDynamicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFcDynamicModel.m; sourceTree = "<group>"; };
+		6517F4831FC57F4800F680A5 /* FBFriendCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFriendCircleViewController.h; sourceTree = "<group>"; };
+		6517F4841FC57F4800F680A5 /* FBFriendCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFriendCircleViewController.m; sourceTree = "<group>"; };
+		6517F4851FC57F4800F680A5 /* FBFriendCircleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FBFriendCircleViewController.xib; sourceTree = "<group>"; };
+		6517F4881FC5811800F680A5 /* FBFriendCircleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFriendCircleCell.h; sourceTree = "<group>"; };
+		6517F4891FC5811800F680A5 /* FBFriendCircleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFriendCircleCell.m; sourceTree = "<group>"; };
+		651B90F71FC70C510097F173 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		651B90F81FC70C510097F173 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		651B90F91FC70C510097F173 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		651B90FA1FC70C510097F173 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		651B90FB1FC70C510097F173 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		651B90FC1FC70C510097F173 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		651B90FD1FC70C510097F173 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		651B91021FC7177D0097F173 /* RequestNetUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestNetUtils.m; sourceTree = "<group>"; };
+		651B91031FC7177D0097F173 /* FcVisit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FcVisit.m; sourceTree = "<group>"; };
+		651B91041FC7177D0097F173 /* RequestNetUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestNetUtils.h; sourceTree = "<group>"; };
+		651B91051FC7177D0097F173 /* FcVisit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcVisit.h; sourceTree = "<group>"; };
+		651B91081FC717EA0097F173 /* AutoCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCommon.m; sourceTree = "<group>"; };
+		651B91091FC717EA0097F173 /* AutoCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCommon.h; sourceTree = "<group>"; };
+		651B910B1FC718470097F173 /* UIDevice+RTCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RTCDevice.h"; sourceTree = "<group>"; };
+		651B910C1FC718470097F173 /* UIDevice+RTCDevice.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIDevice+RTCDevice.mm"; sourceTree = "<group>"; };
 		6563E8041FC2DB6E0013176F /* PublishMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublishMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6563E8071FC2DB6E0013176F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6563E8081FC2DB6E0013176F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +140,7 @@
 		658546AE1FC4164A00D5B5A2 /* FBFcDynamicTopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFcDynamicTopCell.m; sourceTree = "<group>"; };
 		658546B21FC41CAB00D5B5A2 /* UICustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomTextView.h; sourceTree = "<group>"; };
 		658546B31FC41CAB00D5B5A2 /* UICustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomTextView.m; sourceTree = "<group>"; };
+		EA95647411643BD6BA9CA7C6 /* Pods_PublishMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PublishMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D73DF1BBBC0A1945A56614 /* Pods_PublishMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,11 +200,89 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		6517F47E1FC57EA600F680A5 /* FriendC */ = {
+			isa = PBXGroup;
+			children = (
+				6517F4811FC57F1100F680A5 /* Controller */,
+				6517F4801FC57F0B00F680A5 /* Model */,
+				6517F47F1FC57F0500F680A5 /* View */,
+			);
+			path = FriendC;
+			sourceTree = "<group>";
+		};
+		6517F47F1FC57F0500F680A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				651B90F61FC70C510097F173 /* SDPhotoBrowser */,
+				650ED8081FC6CA0C00303373 /* FBFriendCrCommentView.h */,
+				650ED8071FC6CA0C00303373 /* FBFriendCrCommentView.m */,
+				6517F4881FC5811800F680A5 /* FBFriendCircleCell.h */,
+				6517F4891FC5811800F680A5 /* FBFriendCircleCell.m */,
+				650ED7BA1FC69A2E00303373 /* FBFriendOperationMenuView.h */,
+				650ED7BB1FC69A2E00303373 /* FBFriendOperationMenuView.m */,
+				650ED7BD1FC69EB900303373 /* FBWeiXinPhotoContainerView.h */,
+				650ED7BE1FC69EB900303373 /* FBWeiXinPhotoContainerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6517F4801FC57F0B00F680A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				650ED8041FC6B52500303373 /* FBFriendCommentModel.h */,
+				650ED8051FC6B52500303373 /* FBFriendCommentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6517F4811FC57F1100F680A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6517F4831FC57F4800F680A5 /* FBFriendCircleViewController.h */,
+				6517F4841FC57F4800F680A5 /* FBFriendCircleViewController.m */,
+				6517F4851FC57F4800F680A5 /* FBFriendCircleViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		651B90F61FC70C510097F173 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				651B90F71FC70C510097F173 /* SDPhotoBrowserConfig.h */,
+				651B90F81FC70C510097F173 /* SDPhotoBrowser.m */,
+				651B90F91FC70C510097F173 /* SDWaitingView.m */,
+				651B90FA1FC70C510097F173 /* SDBrowserImageView.m */,
+				651B90FB1FC70C510097F173 /* SDWaitingView.h */,
+				651B90FC1FC70C510097F173 /* SDPhotoBrowser.h */,
+				651B90FD1FC70C510097F173 /* SDBrowserImageView.h */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		651B91011FC7177D0097F173 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				651B910B1FC718470097F173 /* UIDevice+RTCDevice.h */,
+				651B910C1FC718470097F173 /* UIDevice+RTCDevice.mm */,
+				651B91091FC717EA0097F173 /* AutoCommon.h */,
+				651B91081FC717EA0097F173 /* AutoCommon.m */,
+				651B91041FC7177D0097F173 /* RequestNetUtils.h */,
+				651B91021FC7177D0097F173 /* RequestNetUtils.m */,
+				651B91051FC7177D0097F173 /* FcVisit.h */,
+				651B91031FC7177D0097F173 /* FcVisit.m */,
+			);
+			name = Net;
+			path = PublishMedia/Net;
+			sourceTree = "<group>";
+		};
 		6563E7FB1FC2DB6E0013176F = {
 			isa = PBXGroup;
 			children = (
+				651B91011FC7177D0097F173 /* Net */,
 				6563E8061FC2DB6E0013176F /* PublishMedia */,
 				6563E8051FC2DB6E0013176F /* Products */,
+				FBB92DC617E6A8C2900ECF8D /* Pods */,
+				683D8AA25583EA8991B883FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +297,7 @@
 		6563E8061FC2DB6E0013176F /* PublishMedia */ = {
 			isa = PBXGroup;
 			children = (
+				6517F47E1FC57EA600F680A5 /* FriendC */,
 				6517F47B1FC5741100F680A5 /* Publish */,
 				6563E8071FC2DB6E0013176F /* AppDelegate.h */,
 				6563E8081FC2DB6E0013176F /* AppDelegate.m */,
@@ -233,6 +359,23 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
+		683D8AA25583EA8991B883FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA95647411643BD6BA9CA7C6 /* Pods_PublishMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB92DC617E6A8C2900ECF8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0494643E4AC2AABA9FEFC081 /* Pods-PublishMedia.debug.xcconfig */,
+				4399E1641F489614C708C3DA /* Pods-PublishMedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6563E81A1FC2DB6E0013176F /* Build configuration list for PBXNativeTarget "PublishMedia" */;
 			buildPhases = (
+				F92D91A021DC644168807283 /* [CP] Check Pods Manifest.lock */,
 				6563E8001FC2DB6E0013176F /* Sources */,
 				6563E8011FC2DB6E0013176F /* Frameworks */,
 				6563E8021FC2DB6E0013176F /* Resources */,
+				0E557A20B019EEDD3734FB27 /* [CP] Embed Pods Frameworks */,
+				044477442EC3F7766C79F33D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,12 +441,80 @@
 				658546A01FC4121500D5B5A2 /* TZImagePickerController.bundle in Resources */,
 				6563E8111FC2DB6E0013176F /* Assets.xcassets in Resources */,
 				65143A281FC45B53009E11AC /* FBFcDynamicBottomCell.xib in Resources */,
+				6517F4871FC57F4800F680A5 /* FBFriendCircleViewController.xib in Resources */,
 				6563E80F1FC2DB6E0013176F /* Main.storyboard in Resources */,
 				658546AC1FC4127800D5B5A2 /* FBFcDynamicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		044477442EC3F7766C79F33D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia-resources.sh",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E557A20B019EEDD3734FB27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MLLabel/MLLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PublishMedia/Pods-PublishMedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92D91A021DC644168807283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PublishMedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6563E8001FC2DB6E0013176F /* Sources */ = {
@@ -309,28 +523,41 @@
 			files = (
 				658546A31FC4121500D5B5A2 /* TZPhotoPickerController.m in Sources */,
 				6563E80C1FC2DB6E0013176F /* ViewController.m in Sources */,
+				651B910D1FC718470097F173 /* UIDevice+RTCDevice.mm in Sources */,
 				658546B01FC4164A00D5B5A2 /* FBFcDynamicTopCell.m in Sources */,
+				6517F4861FC57F4800F680A5 /* FBFriendCircleViewController.m in Sources */,
+				650ED8061FC6B52500303373 /* FBFriendCommentModel.m in Sources */,
+				651B90FE1FC70C510097F173 /* SDPhotoBrowser.m in Sources */,
+				651B91001FC70C510097F173 /* SDBrowserImageView.m in Sources */,
 				658546A21FC4121500D5B5A2 /* TZImageManager.m in Sources */,
+				650ED7BC1FC69A2E00303373 /* FBFriendOperationMenuView.m in Sources */,
 				65143A2B1FC4629F009E11AC /* FBFcDynamicModel.m in Sources */,
 				658546A71FC4121500D5B5A2 /* TZGifPhotoPreviewController.m in Sources */,
 				6585469A1FC4121500D5B5A2 /* TZAssetCell.m in Sources */,
 				658546B41FC41CAB00D5B5A2 /* UICustomTextView.m in Sources */,
+				650ED8091FC6CA0D00303373 /* FBFriendCrCommentView.m in Sources */,
 				65143A271FC45B53009E11AC /* FBFcDynamicBottomCell.m in Sources */,
+				651B91061FC7177D0097F173 /* RequestNetUtils.m in Sources */,
+				651B91071FC7177D0097F173 /* FcVisit.m in Sources */,
 				6585469B1FC4121500D5B5A2 /* TZVideoPlayerController.m in Sources */,
+				651B90FF1FC70C510097F173 /* SDWaitingView.m in Sources */,
 				658546791FC411DD00D5B5A2 /* TZTestCell.m in Sources */,
 				6585469D1FC4121500D5B5A2 /* NSBundle+TZImagePicker.m in Sources */,
 				6563E8171FC2DB6E0013176F /* main.m in Sources */,
 				658546991FC4121500D5B5A2 /* TZImageCropManager.m in Sources */,
+				6517F48A1FC5811800F680A5 /* FBFriendCircleCell.m in Sources */,
 				658546A41FC4121500D5B5A2 /* TZPhotoPreviewCell.m in Sources */,
 				6585469F1FC4121500D5B5A2 /* TZPhotoPreviewController.m in Sources */,
 				658546A11FC4121500D5B5A2 /* TZProgressView.m in Sources */,
 				6585469C1FC4121500D5B5A2 /* TZAssetModel.m in Sources */,
 				6585469E1FC4121500D5B5A2 /* UIView+Layout.m in Sources */,
+				651B910A1FC717EA0097F173 /* AutoCommon.m in Sources */,
 				658546A61FC4121500D5B5A2 /* TZLocationManager.m in Sources */,
 				6585467A1FC411DD00D5B5A2 /* LxGridViewFlowLayout.m in Sources */,
 				658546A51FC4121500D5B5A2 /* TZImagePickerController.m in Sources */,
 				6563E8091FC2DB6E0013176F /* AppDelegate.m in Sources */,
 				658546AB1FC4127800D5B5A2 /* FBFcDynamicViewController.m in Sources */,
+				650ED7BF1FC69EB900303373 /* FBWeiXinPhotoContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +689,7 @@
 		};
 		6563E81B1FC2DB6E0013176F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0494643E4AC2AABA9FEFC081 /* Pods-PublishMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +704,7 @@
 		};
 		6563E81C1FC2DB6E0013176F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4399E1641F489614C708C3DA /* Pods-PublishMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

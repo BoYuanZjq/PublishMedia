@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +23,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ia-Uh-UsV">
-                                <rect key="frame" x="156" y="318.5" width="62" height="30"/>
+                                <rect key="frame" x="156" y="252" width="62" height="30"/>
                                 <state key="normal" title="发表说说"/>
                                 <connections>
                                     <action selector="publishEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5N-l7-720"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1E-rP-soo">
+                                <rect key="frame" x="164" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="朋友圈"/>
+                                <connections>
+                                    <action selector="friendC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFz-QZ-Sqj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="n1E-rP-soo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ja-6y-VVh"/>
                             <constraint firstItem="9Ia-Uh-UsV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SaK-dY-Da2"/>
-                            <constraint firstItem="9Ia-Uh-UsV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hOs-xn-4h7"/>
+                            <constraint firstItem="9Ia-Uh-UsV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="8:10" id="hOs-xn-4h7"/>
+                            <constraint firstItem="n1E-rP-soo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ojj-t4-Gvr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oR7-QL-gjR"/>
