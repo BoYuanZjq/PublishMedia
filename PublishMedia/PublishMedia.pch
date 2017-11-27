@@ -1,0 +1,20 @@
+//
+//  PublishMedia.pch
+//  PublishMedia
+//
+//  Created by derek on 2017/11/26.
+//  Copyright © 2017年 derek. All rights reserved.
+//
+
+#ifndef PublishMedia_pch
+#define PublishMedia_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <MJExtension/MJExtension.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PublishMedia_pch */

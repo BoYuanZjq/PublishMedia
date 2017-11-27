@@ -7,5 +7,8 @@ pod 'MLLabel'
 pod 'TZImagePickerController'
 pod 'AFNetworking'
 pod 'Reachability'
+pod 'AliyunOSSiOS'
+pod 'YYText'
+pod 'MJExtension'
 #pod 'SDPhotoBrowser'
 end

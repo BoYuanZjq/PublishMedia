@@ -12,15 +12,25 @@
 
 @interface FBFriendCommentModel : NSObject
 
-@property (nonatomic, copy) NSString *iconName;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *msgContent;
+@property (nonatomic , copy) NSString              * fc_tr_id;
+@property (nonatomic , copy) NSString              * tr_title;
+// 内容
+@property (nonatomic , copy) NSString              * tr_content;
+@property (nonatomic , copy) NSString              * tr_u_id;
+@property (nonatomic , copy) NSString              * tr_u_name;
+@property (nonatomic , copy) NSString              * tr_u_icon;
+@property (nonatomic , assign) BOOL                tr_ilike;
+
+@property (nonatomic , copy) NSString              * tr_icomment;
+@property (nonatomic , copy) NSString              * tr_belong_to;
+@property (nonatomic , copy) NSString              * tr_pub_at;
+//图片
+@property (nonatomic , copy) NSString              * tr_attach;
+
 @property (nonatomic, strong) NSArray *picNamesArray;
 
-@property (nonatomic, assign, getter = isLiked) BOOL liked;
-
-@property (nonatomic, strong) NSArray<FBFriendLikeModel *> *likeItemsArray;
-@property (nonatomic, strong) NSArray<FBFriendCommentItemModel *> *commentItemsArray;
+@property (nonatomic, strong) NSArray<FBFriendLikeModel *> *tr_ilikes;
+@property (nonatomic, strong) NSArray<FBFriendCommentItemModel *> *tr_comments;
 
 @property (nonatomic, assign) BOOL isOpening;
 
@@ -31,7 +41,7 @@
 @interface FBFriendLikeModel : NSObject
 
 @property (nonatomic, copy) NSString *userName;
-@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString *lk_u_id;
 
 @property (nonatomic, copy) NSAttributedString *attributedContent;
 
@@ -39,8 +49,11 @@
 
 @interface FBFriendCommentItemModel : NSObject
 
-@property (nonatomic, copy) NSString *userName;
-@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString *c_u_name;
+@property (nonatomic, copy) NSString *c_u_id;
+@property (nonatomic, copy) NSString *c_u_icon;
+@property (nonatomic, copy) NSString *c_content;
+
 
 @property (nonatomic, copy) NSAttributedString *attributedContent;
 

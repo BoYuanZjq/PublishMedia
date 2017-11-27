@@ -10,6 +10,7 @@
 #import "FBFriendOperationMenuView.h"
 #import "FBFriendCrCommentView.h"
 #import "FBWeiXinPhotoContainerView.h"
+#import "FBFriendContactLabel.h"
 
 #import "UIView+SDAutoLayout.h"
 
@@ -25,7 +26,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
 // 名字
 @property (nonatomic, strong) UILabel *nameLable;
 // 内容
-@property (nonatomic, strong) UILabel *contentLabel;
+@property (nonatomic, strong) FBFriendContactLabel *contentLabel;
 //图片
 @property (nonatomic, strong) FBWeiXinPhotoContainerView *picContainerView;
 //时间
@@ -81,7 +82,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     _nameLable.font = [UIFont systemFontOfSize:14];
     _nameLable.textColor = [UIColor colorWithRed:(54 / 255.0) green:(71 / 255.0) blue:(121 / 255.0) alpha:0.9];
     
-    _contentLabel = [UILabel new];
+    _contentLabel = [FBFriendContactLabel new];
     _contentLabel.font = [UIFont systemFontOfSize:contentLabelFontSize];
     _contentLabel.textColor = [UIColor blackColor];
     _contentLabel.numberOfLines = 0;
@@ -191,11 +192,10 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
 {
     _model = model;
     
-    [_commentView setupWithLikeItemsArray:model.likeItemsArray commentItemsArray:model.commentItemsArray];
-    
-    _iconView.image = [UIImage imageNamed:model.iconName];
-    _nameLable.text = model.name;
-    _contentLabel.text = model.msgContent;
+    [_commentView setupWithLikeItemsArray:model.tr_ilikes commentItemsArray:model.tr_comments];
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:model.tr_u_icon] placeholderImage:[UIImage imageNamed:@"user_default_icon"]];
+    _nameLable.text = model.tr_u_name;
+    _contentLabel.text = model.tr_content;
     _picContainerView.picPathStringsArray = model.picNamesArray;
     
     if (model.shouldShowMoreButton) { // 如果文字高度超过60
@@ -221,7 +221,7 @@ NSString *const kSDTimeLineCellOperationButtonClickedNotification = @"SDTimeLine
     
     UIView *bottomView;
     
-    if (!model.commentItemsArray.count && !model.likeItemsArray.count) {
+    if (!model.tr_comments.count && !model.tr_ilikes.count) {
         bottomView = _timeLabel;
     } else {
         bottomView = _commentView;

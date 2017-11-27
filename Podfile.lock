@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.7.0)
+  - MJExtension (3.0.13)
   - MLLabel (1.10.5)
   - Reachability (3.2)
   - SDAutoLayout (2.2.0)
@@ -21,23 +23,30 @@ PODS:
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
   - TZImagePickerController (1.9.5)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking
+  - AliyunOSSiOS
+  - MJExtension
   - MLLabel
   - Reachability
   - SDAutoLayout
   - SDWebImage
   - TZImagePickerController
+  - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AliyunOSSiOS: d7535c7f38530e09fd7b7dc31d780fe601421616
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MLLabel: d76124055a2205e7f76878e62cd06ba925ba0c97
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   TZImagePickerController: 3f735f4ad5ca6a292a762216d404f9d7a83adad4
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 5c418f4d8be00b30f813b0b07644b655801bbfea
+PODFILE CHECKSUM: c7559837656c80605a08dadf748f0fbe618c8958
 
 COCOAPODS: 1.4.0.beta.1

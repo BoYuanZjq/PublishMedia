@@ -21,6 +21,9 @@
 #import "TZGifPhotoPreviewController.h"
 #import "TZLocationManager.h"
 
+#import "FcVisit.h"
+#import "JQOSSHelper.h"
+
 
 #define K_Top_Cell @"FBFcDynamicTopCell"
 #define K_Bottom_Cell @"FBFcDynamicBottomCell"
@@ -50,24 +53,70 @@
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [backButton setTitle:@"取消" forState:UIControlStateNormal];
     [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backButton addTarget:self.navigationController action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:self action:@selector(closeEvent) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backItem;
     
     UIButton *sendButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [sendButton setTitle:@"发布" forState:UIControlStateNormal];
     [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [sendButton addTarget:self.navigationController action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
+    [sendButton addTarget:self action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *sendItem = [[UIBarButtonItem alloc] initWithCustomView:sendButton];
     self.navigationItem.rightBarButtonItem = sendItem;
     
 }
 //关闭
-- (void)close {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)closeEvent {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)send {
     
+    if (self.dynamicModel.picArray.count!=0) {
+        // 先上传图片，在发表说说
+        __weak typeof(self)weakSelf = self;
+        [JQOSSHelper asyncUploadImages:self.dynamicModel.picArray complete:^(BOOL isSuccess, NSArray<NSString *> *remotePaths) {
+            if (isSuccess) {
+//                [weakSelf sendFriendC:[weakSelf toIosJSON:remotePaths]];
+                [weakSelf sendFriendC:[weakSelf toPostString:remotePaths]];
+            }else{
+                NSLog(@"上传图片出错");
+            }
+        }];
+    }else{
+        [self sendFriendC:nil];
+    }
+}
+- (void)sendFriendC:(NSString*)picJson {
+    __weak typeof(self)weakSelf = self;
+    //发布说说
+    [FcVisit publish_fc:@"11" withUname:@"坚强" withUicon:@"www.baidu.com" withCateId:nil withTitle:nil withContent:self.dynamicModel.textStr withMedias:picJson withAccessToken:@"skkjlksdf" withReturnData:^(BOOL isScuess, int responseCode) {
+        if (isScuess) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                 [weakSelf closeEvent];
+            });
+        }
+    } withFail:^(NSError *error, BOOL isNetError) {
+        
+    }];
+}
+- (NSString*)toPostString:(NSArray*)array {
+    NSString *str;
+    for (int i=0; i<array.count; i++) {
+        if (i==0) {
+            str = [array objectAtIndex:i];
+        }else{
+            str = [str stringByAppendingString:[NSString stringWithFormat:@",%@",[array objectAtIndex:i]]];
+        }
+    }
+    return str;
+}
+
+-(NSString *)toIosJSON:(id)aParam {
+    
+    NSData   *jsonData=[NSJSONSerialization dataWithJSONObject:aParam options:0 error:nil];
+    NSString *jsonStr=[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    jsonStr = [jsonStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return jsonStr;
 }
 
 #pragma mark ====== UITableViewDelegate ======

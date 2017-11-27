@@ -11,6 +11,7 @@
 #import "MLLinkLabel.h"
 #import "FBFriendCommentModel.h"
 
+
 #define SDColor(r, g, b, a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
 #define TimeLineCellHighlightedColor [UIColor colorWithRed:92/255.0 green:140/255.0 blue:193/255.0 alpha:1.0]
 
@@ -60,8 +61,8 @@
 }
 - (void)configTheme{
 
-    _bgImageView.backgroundColor =  SDColor(230, 230, 230, 1.0f);
-    _likeLabel.backgroundColor = [UIColor blackColor];
+   // _bgImageView.backgroundColor =  SDColor(230, 230, 230, 1.0f);
+    _likeLabel.textColor = [UIColor blackColor];
     _likeLableBottomLine.backgroundColor = SDColor(210, 210, 210, 1.0f);
     
 }
@@ -75,7 +76,7 @@
         MLLinkLabel *label = [MLLinkLabel new];
         UIColor *highLightColor = TimeLineCellHighlightedColor;
         label.linkTextAttributes = @{NSForegroundColorAttributeName : highLightColor};
-        label.backgroundColor = [UIColor blackColor];
+        label.backgroundColor = [UIColor clearColor];
         label.font = [UIFont systemFontOfSize:14];
         label.delegate = self;
         [self addSubview:label];
@@ -97,7 +98,7 @@
     _likeItemsArray = likeItemsArray;
     
     NSTextAttachment *attach = [NSTextAttachment new];
-    attach.image = [UIImage imageNamed:@"Like"];
+    attach.image = [UIImage imageNamed:@"AlbumLike"];
     attach.bounds = CGRectMake(0, -3, 16, 16);
     NSAttributedString *likeIcon = [NSAttributedString attributedStringWithAttachment:attach];
     
@@ -215,7 +216,7 @@
 //        [attString setAttributes:@{NSLinkAttributeName : model.secondUserId} range:[text rangeOfString:model.secondUserName]];
 //    }
 //    return attString;
-    return [[NSMutableAttributedString alloc] initWithString:model.userName];
+    return [[NSMutableAttributedString alloc] initWithString:model.c_u_name];
 }
 
 - (NSMutableAttributedString *)generateAttributedStringWithLikeItemModel:(FBFriendLikeModel *)model
@@ -223,7 +224,7 @@
     NSString *text = model.userName;
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:text];
     UIColor *highLightColor = [UIColor blueColor];
-    [attString setAttributes:@{NSForegroundColorAttributeName : highLightColor, NSLinkAttributeName : model.userId} range:[text rangeOfString:model.userName]];
+    [attString setAttributes:@{NSForegroundColorAttributeName : highLightColor, NSLinkAttributeName : model.lk_u_id} range:[text rangeOfString:model.userName]];
     
     return attString;
 }
