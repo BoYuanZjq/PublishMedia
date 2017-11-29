@@ -266,11 +266,9 @@ NSString *const kSDTimeLineCellOperationButtonClickedNoc = @"SDTimeLineCellOpera
         jgg_height = 3*image_width+2*kGAP;
     }
     
-    ///解决图片复用问题
-    [self.jggView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     self.jggView.dataSource = model.picNamesArray;
     __weak __typeof(self) weakSelf= self;
-    
     self.jggView.tapBlock = ^(NSInteger index, NSArray *dataSource) {
 
     };
@@ -391,7 +389,6 @@ NSString *const kSDTimeLineCellOperationButtonClickedNoc = @"SDTimeLineCellOpera
     [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(self.tableView.contentSize.height+2);//2为tableView最后一个CommentCell1底部下面的空隙
     }];
-    
     
     return cell_height;
     

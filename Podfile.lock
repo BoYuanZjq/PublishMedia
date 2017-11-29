@@ -27,7 +27,6 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking
@@ -40,7 +39,6 @@ DEPENDENCIES:
   - SDWebImage
   - TZImagePickerController
   - YYKit
-  - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -53,8 +51,7 @@ SPEC CHECKSUMS:
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   TZImagePickerController: 3f735f4ad5ca6a292a762216d404f9d7a83adad4
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 8093024991e344f9a581d910faacb60f20563803
+PODFILE CHECKSUM: 73b3a6cbca1731655ba8235f4fb83df3c768fae3
 
 COCOAPODS: 1.4.0.beta.1

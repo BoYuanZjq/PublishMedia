@@ -7,20 +7,33 @@
 //
 
 #import "JGGView.h"
-#import "YYAnimatedImageView.h"
-#import "UIImageView+WebCache.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <YYKit/YYKit.h>
+#import "SDPhotoBrowser.h"
+@interface JGGView()<SDPhotoBrowserDelegate>
+
+@end
 
 @implementation JGGView
 -(void)tapImageAction:(UITapGestureRecognizer *)tap{
-    UIImageView *tapView = (UIImageView *)tap.view;
-    if (self.tapBlock) {
-        self.tapBlock(tapView.tag,self.dataSource);
-    }
+    UIImageView *imageView = (UIImageView *)tap.view;
+//    if (self.tapBlock) {
+//        self.tapBlock(tapView.tag,self.dataSource);
+//    }
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    browser.currentImageIndex = imageView.tag;
+    browser.sourceImagesContainerView = self;
+    browser.imageCount = self.dataSource.count;
+    browser.delegate = self;
+    [browser show];
 }
 
 -(void)setDataSource:(NSArray *)dataSource{
     _dataSource = dataSource;
+    
+    //解决图片复用问题
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     //单张图片的大小
     CGFloat jgg_width = kScreenWidth-2*kGAP-kAvatar_Size-50;
 
@@ -44,6 +57,22 @@
         [iv addGestureRecognizer:singleTap];
     }
 }
+
+#pragma mark - SDPhotoBrowserDelegate
+
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSString *imageName = self.dataSource[index];
+    NSURL *url = [NSURL URLWithString:imageName];
+    return url;
+}
+
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    UIImageView *imageView = self.subviews[index];
+    return imageView.image;
+}
+
 
 @end
 
