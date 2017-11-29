@@ -83,7 +83,6 @@ static CGFloat textFieldH = 40;
    return self.dataArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     FBFriendCircleCell *cell = [tableView dequeueReusableCellWithIdentifier:fbFriendCircleCell];
@@ -107,7 +106,8 @@ static CGFloat textFieldH = 40;
 {
     // >>>>>>>>>>>>>>>>>>>>> * cell自适应 * >>>>>>>>>>>>>>>>>>>>>>>>
     id model = self.dataArray[indexPath.row];
-    return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[FBFriendCircleCell class] contentViewWidth:[self cellContentViewWith]];
+    CGFloat height = [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[FBFriendCircleCell class] contentViewWidth:[self cellContentViewWith]];
+    return height;
 }
 
 
@@ -132,7 +132,7 @@ static CGFloat textFieldH = 40;
     __weak typeof(self)weakSelf = self;
     if (model.tr_ilike) {
         //取消点赞
-        [FcVisit fc_ilike_u:@"11" withFc_tr_Id:model.fc_tr_id withAcstoken:@"xxxxx" withReturnData:^(BOOL isScuess, int responseCode) {
+        [FcVisit fc_ilike_u:@"11"  withFc_tr_Id:model.fc_tr_id withAcstoken:@"xxxxx" withReturnData:^(BOOL isScuess, int responseCode) {
             if (isScuess) {
                 [weakSelf like:NO withCommentModel:model withIndexPath:index];
             }
@@ -140,7 +140,7 @@ static CGFloat textFieldH = 40;
             
         }];
     } else {
-        [FcVisit fc_ilike:@"11" withFc_tr_Id:model.fc_tr_id withDeviceId:@"xxsdfsd" withU_icon:@"www.baidu.com" withAcstoken:@"xxxxxx" withReturnData:^(BOOL isScuess, int responseCode) {
+        [FcVisit fc_ilike:@"11" withName:@"坚强" withFc_tr_Id:model.fc_tr_id withDeviceId:@"xxsdfsd" withAcstoken:@"xxxxxx" withReturnData:^(BOOL isScuess, int responseCode) {
             if (isScuess) {
                 [weakSelf like:YES withCommentModel:model withIndexPath:index];
             }
@@ -155,7 +155,7 @@ static CGFloat textFieldH = 40;
     if (isLike) {
         FBFriendLikeModel *like = [[FBFriendLikeModel alloc] init];
         like.lk_u_id = @"11";
-        like.userName = @"坚强";
+        like.lk_u_name = @"坚强";
         commentModel.tr_ilike = YES;
         [temp addObject:like];
     }else{

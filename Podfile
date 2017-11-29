@@ -10,5 +10,7 @@ pod 'Reachability'
 pod 'AliyunOSSiOS'
 pod 'YYText'
 pod 'MJExtension'
+pod 'Masonry'
+pod 'YYKit'
 #pod 'SDPhotoBrowser'
 end

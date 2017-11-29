@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "FBFcDynamicViewController.h"
 #import "FBFriendCircleViewController.h"
+#import "FBTempViewController.h"
 
 @interface ViewController ()
 
@@ -33,7 +34,11 @@
 }
 //　朋友圈
 - (IBAction)friendC:(id)sender {
-    FBFriendCircleViewController *friend = [[FBFriendCircleViewController alloc] initWithNibName:@"FBFriendCircleViewController" bundle:nil];
+//    FBFriendCircleViewController *friend = [[FBFriendCircleViewController alloc] initWithNibName:@"FBFriendCircleViewController" bundle:nil];
+//    [self.navigationController pushViewController:friend animated:YES];
+    
+    
+    FBTempViewController *friend = [[FBTempViewController alloc] initWithNibName:@"FBTempViewController" bundle:nil];
     [self.navigationController pushViewController:friend animated:YES];
 }
 

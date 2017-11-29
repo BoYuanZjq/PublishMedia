@@ -12,4 +12,7 @@
 
 - (void)setupWithLikeItemsArray:(NSArray *)likeItemsArray commentItemsArray:(NSArray *)commentItemsArray;
 
+typedef void(^DidSelectedLikeUserBlock)(NSString *userId);
+@property (nonatomic, copy) DidSelectedLikeUserBlock selectedUserBlock;
+
 @end

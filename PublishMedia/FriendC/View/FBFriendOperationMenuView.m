@@ -40,26 +40,48 @@
     UIView *centerLine = [UIView new];
     centerLine.backgroundColor = [UIColor grayColor];
     
-    [self sd_addSubviews:@[_likeButton, _commentButton, centerLine]];
+    [self addSubview:self.likeButton];
+    [self addSubview:self.commentButton];
+    [self addSubview:centerLine];
     CGFloat margin = 5;
-   
-    _likeButton.sd_layout
-    .leftSpaceToView(self, margin)
-    .topEqualToView(self)
-    .bottomEqualToView(self)
-    .widthIs(80);
     
-    centerLine.sd_layout
-    .leftSpaceToView(_likeButton, margin)
-    .topSpaceToView(self, margin)
-    .bottomSpaceToView(self, margin)
-    .widthIs(1);
+    [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self);
+        make.top.bottom.equalTo(self);
+        make.width.equalTo(self.mas_width).multipliedBy(.5);
+    }];
+    [centerLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.likeButton.mas_right);
+        make.top.equalTo(self).offset(margin);
+        make.bottom.equalTo(self).offset(-margin);
+        make.width.equalTo(@1);
+    }];
+    [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(centerLine.mas_right).offset(margin);
+        make.top.bottom.equalTo(self);
+        make.width.equalTo(self.likeButton.mas_width);
+    }];
     
-    _commentButton.sd_layout
-    .leftSpaceToView(centerLine, margin)
-    .topEqualToView(_likeButton)
-    .bottomEqualToView(_likeButton)
-    .widthRatioToView(_likeButton, 1);
+//    [self sd_addSubviews:@[_likeButton, _commentButton, centerLine]];
+//    CGFloat margin = 5;
+//
+//    _likeButton.sd_layout
+//    .leftSpaceToView(self, margin)
+//    .topEqualToView(self)
+//    .bottomEqualToView(self)
+//    .widthIs(80);
+//
+//    centerLine.sd_layout
+//    .leftSpaceToView(_likeButton, margin)
+//    .topSpaceToView(self, margin)
+//    .bottomSpaceToView(self, margin)
+//    .widthIs(1);
+//
+//    _commentButton.sd_layout
+//    .leftSpaceToView(centerLine, margin)
+//    .topEqualToView(_likeButton)
+//    .bottomEqualToView(_likeButton)
+//    .widthRatioToView(_likeButton, 1);
 }
 
 
@@ -74,29 +96,29 @@
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 3, 0, 0);
     return btn;
 }
-- (void)setShow:(BOOL)show
-{
-    _show = show;
-    
-    [UIView animateWithDuration:0.2 animations:^{
-        if (!show) {
-            [self clearAutoWidthSettings];
-            self.sd_layout
-            .widthIs(0);
-        } else {
-            self.fixedWidth = nil;
-            [self setupAutoWidthWithRightView:_commentButton rightMargin:5];
-        }
-        [self updateLayoutWithCellContentView:self.superview];
-    }];
-}
+//- (void)setShow:(BOOL)show
+//{
+//    _show = show;
+//
+//    [UIView animateWithDuration:0.2 animations:^{
+//        if (!show) {
+//            [self clearAutoWidthSettings];
+//            self.sd_layout
+//            .widthIs(0);
+//        } else {
+//            self.fixedWidth = nil;
+//            [self setupAutoWidthWithRightView:_commentButton rightMargin:5];
+//        }
+//        [self updateLayoutWithCellContentView:self.superview];
+//    }];
+//}
 
 #pragma mark - button event
 - (void)likeButtonClicked {
     if (self.likeButtonClickedOperation) {
         self.likeButtonClickedOperation();
     }
-    self.show = NO;
+   // self.show = NO;
 }
 
 - (void)commentButtonClicked {
@@ -104,7 +126,7 @@
     if (self.commentButtonClickedOperation) {
         self.commentButtonClickedOperation();
     }
-    self.show = NO;
+  //  self.show = NO;
 }
 
 /*

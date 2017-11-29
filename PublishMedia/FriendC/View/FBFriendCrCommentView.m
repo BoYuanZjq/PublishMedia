@@ -40,12 +40,13 @@
     }
     return self;
 }
+
 - (void)setupViews
 {
     _bgImageView = [UIImageView new];
     UIImage *bgImage = [[[UIImage imageNamed:@"LikeCmtBg"] stretchableImageWithLeftCapWidth:40 topCapHeight:30] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     _bgImageView.image = bgImage;
-    _bgImageView.backgroundColor = [UIColor clearColor];
+//    _bgImageView.backgroundColor = [UIColor clearColor];
     [self addSubview:_bgImageView];
     
     _likeLabel = [MLLinkLabel new];
@@ -205,26 +206,32 @@
 
 - (NSMutableAttributedString *)generateAttributedStringWithCommentItemModel:(FBFriendCommentItemModel *)model
 {
-//    NSString *text = model.firstUserName;
-//    if (model.secondUserName.length) {
-//        text = [text stringByAppendingString:[NSString stringWithFormat:@"回复%@", model.secondUserName]];
-//    }
-//    text = [text stringByAppendingString:[NSString stringWithFormat:@"：%@", model.commentString]];
-//    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:text];
-//    [attString setAttributes:@{NSLinkAttributeName : model.firstUserId} range:[text rangeOfString:model.firstUserName]];
-//    if (model.secondUserName) {
-//        [attString setAttributes:@{NSLinkAttributeName : model.secondUserId} range:[text rangeOfString:model.secondUserName]];
-//    }
-//    return attString;
-    return [[NSMutableAttributedString alloc] initWithString:model.c_u_name];
+    NSString *text = model.c_u_name;
+    if (model.c_rep_u_name.length) {
+        text = [text stringByAppendingString:[NSString stringWithFormat:@"回复%@", model.c_rep_u_name]];
+        
+        text = [text stringByAppendingString:[NSString stringWithFormat:@"：%@", model.c_rep_content]];
+    }else{
+           text = [text stringByAppendingString:[NSString stringWithFormat:@"：%@", model.c_content]];
+    }
+   
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:text];
+    [attString setAttributes:@{NSLinkAttributeName : [NSString stringWithFormat:@"selected:%@",model.c_u_id]} range:[text rangeOfString:model.c_u_name]];
+    if (model.c_rep_u_name) {
+        [attString setAttributes:@{NSLinkAttributeName : [NSString stringWithFormat:@"selected:%@",model.c_rep_u_id]} range:[text rangeOfString:model.c_rep_u_name]];
+    }
+    
+    [attString setAttributes:@{NSLinkAttributeName : [NSString stringWithFormat:@"replay:%@",model.c_u_id]} range:NSMakeRange(0, attString.length)];
+    
+    return attString;
 }
 
+//点赞
 - (NSMutableAttributedString *)generateAttributedStringWithLikeItemModel:(FBFriendLikeModel *)model
 {
-    NSString *text = model.userName;
+    NSString *text = model.lk_u_name;
     NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:text];
-    UIColor *highLightColor = [UIColor blueColor];
-    [attString setAttributes:@{NSForegroundColorAttributeName : highLightColor, NSLinkAttributeName : model.lk_u_id} range:[text rangeOfString:model.userName]];
+    [attString setAttributes:@{NSForegroundColorAttributeName : [UIColor grayColor], NSLinkAttributeName : [NSString stringWithFormat:@"selected:%@",model.lk_u_id]} range:[text rangeOfString:model.lk_u_name]];
     
     return attString;
 }
@@ -235,8 +242,17 @@
 - (void)didClickLink:(MLLink *)link linkText:(NSString *)linkText linkLabel:(MLLinkLabel *)linkLabel
 {
     NSLog(@"%@", link.linkValue);
+    if ([link.linkValue hasPrefix:@"selected:"]) {
+        //点赞：
+        if (self.selectedUserBlock) {
+            NSArray *likeArr = [link.linkValue componentsSeparatedByString:@":"];
+            self.selectedUserBlock([likeArr lastObject]);
+        }
+    }else if ([link.linkValue hasPrefix:@"replay:"]){
+        NSArray *likeArr = [link.linkValue componentsSeparatedByString:@":"];
+        self.selectedUserBlock([likeArr lastObject]);
+    }
 }
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

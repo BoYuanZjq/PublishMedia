@@ -16,7 +16,9 @@
 
 - (void)setTr_attach:(NSString *)tr_attach {
     _tr_attach = tr_attach;
-   
+    if (tr_attach.length==0) {
+        return;
+    }
     //去除引号
     tr_attach = [tr_attach stringByReplacingOccurrencesOfString:@"'" withString:@""];
     NSArray *childArray = [tr_attach componentsSeparatedByString:@","];

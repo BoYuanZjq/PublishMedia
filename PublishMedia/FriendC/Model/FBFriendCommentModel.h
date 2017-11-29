@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @class FBFriendCommentItemModel,FBFriendLikeModel;
 
 @interface FBFriendCommentModel : NSObject
@@ -29,18 +30,20 @@
 
 @property (nonatomic, strong) NSArray *picNamesArray;
 
-@property (nonatomic, strong) NSArray<FBFriendLikeModel *> *tr_ilikes;
-@property (nonatomic, strong) NSArray<FBFriendCommentItemModel *> *tr_comments;
+@property (nonatomic, strong) NSMutableArray<FBFriendLikeModel *> *tr_ilikes;
+@property (nonatomic, strong) NSMutableArray<FBFriendCommentItemModel *> *tr_comments;
 
 @property (nonatomic, assign) BOOL isOpening;
 
 @property (nonatomic, assign, readonly) BOOL shouldShowMoreButton;
 
+@property (nonatomic, assign) BOOL shouldUpdateCache;
+
 @end
 
 @interface FBFriendLikeModel : NSObject
 
-@property (nonatomic, copy) NSString *userName;
+@property (nonatomic, copy) NSString *lk_u_name;
 @property (nonatomic, copy) NSString *lk_u_id;
 
 @property (nonatomic, copy) NSAttributedString *attributedContent;
@@ -49,10 +52,20 @@
 
 @interface FBFriendCommentItemModel : NSObject
 
-@property (nonatomic, copy) NSString *c_u_name;
-@property (nonatomic, copy) NSString *c_u_id;
-@property (nonatomic, copy) NSString *c_u_icon;
-@property (nonatomic, copy) NSString *c_content;
+@property (nonatomic , copy) NSString              * c_u_id;
+@property (nonatomic , copy) NSString              * c_u_icon;
+@property (nonatomic , copy) NSString              * c_u_name;
+@property (nonatomic , copy) NSString              * c_content;
+
+@property (nonatomic , copy) NSString              * c_id;
+@property (nonatomic , copy) NSString              * c_ilike;
+@property (nonatomic , copy) NSString              * c_pub_at;
+@property (nonatomic , copy) NSString              * c_ihate;
+
+@property (nonatomic , copy) NSString              * c_rep_u_id;
+@property (nonatomic , copy) NSString              * c_rep_u_name;
+@property (nonatomic , copy) NSString              * c_rep_content;
+
 
 
 @property (nonatomic, copy) NSAttributedString *attributedContent;
